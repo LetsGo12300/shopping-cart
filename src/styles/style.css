@@ -6,6 +6,13 @@
     margin: 0px;
 }
 
+#root{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -14,6 +21,25 @@
     padding: 20px 25px;
     background-color: black;
     color: #FAB315;
+}
+
+.cart-container{
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    background-color: #FAB315;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.shopping-cart{
+    color: black;
+}
+
+.shopping-cart:hover{
+    color: #ca8a04;
 }
 
 .links{
