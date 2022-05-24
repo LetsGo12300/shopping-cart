@@ -92,3 +92,8 @@ html, body, #root{
         padding: 15px;
     }
 }
+
+.shop-item-link{
+    text-decoration: none;
+    color: inherit;
+}
