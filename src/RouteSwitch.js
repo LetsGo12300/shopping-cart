@@ -20,9 +20,9 @@ const RouteSwitch = () => {
                 <Route path="/" element={<Home />}></Route>
                 <Route path="shop" element={<Shop cartItems={cartItems} setCartItems={setCartItems} items={items}/>}></Route>
                 <Route path="/shop/:itemId" element={<ShopItem items={items} setItems={setItems} cartItems={cartItems} setCartItems={setCartItems}/>}></Route>
-                <Route path="cart" element={<Cart items={items} setItems={setItems}/>}></Route>
+                <Route path="cart" element={<Cart items={items} setItems={setItems} cartItems={cartItems} setCartItems={setCartItems}/>}></Route>
             </Routes>
-            <StickyCart cartItems={cartItems}/>
+            <StickyCart cartItems={cartItems} />
         </BrowserRouter>
     );
 };

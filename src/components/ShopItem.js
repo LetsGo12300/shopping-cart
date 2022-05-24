@@ -53,7 +53,7 @@ const ShopItem = (props) => {
                             <input
                                 onChange={handleInputChange}
                                 className="input-item"
-                                type="text"
+                                type="number"
                                 name="items"
                                 value={buyCount}
                                 required
