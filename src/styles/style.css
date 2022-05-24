@@ -53,3 +53,9 @@
     text-decoration: inherit;
     font-size: 1.2em;
 }
+
+.container{
+    display: flex;
+    height: 100%;
+    background-color: rgb(231, 226, 218);
+}

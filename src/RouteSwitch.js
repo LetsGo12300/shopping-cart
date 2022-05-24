@@ -1,4 +1,4 @@
-import App from './components/App';
+import Home from './components/Home';
 import Shop from './components/Shop';
 import Navbar from './components/Navbar';
 import StickyCart from './components/StickyCart';
@@ -13,7 +13,7 @@ const RouteSwitch = () => {
         <BrowserRouter>
             <Navbar />
             <Routes>
-                <Route path="/" element={<App />}></Route>
+                <Route path="/" element={<Home />}></Route>
                 <Route path="shop" element={<Shop setCartItems={setCartItems}/>}></Route>
                 <Route path="cart" element={<Cart />}></Route>
             </Routes>
