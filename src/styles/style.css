@@ -6,11 +6,13 @@
     margin: 0px;
 }
 
+html, body, #root{
+    height: 100%;
+}
+
 #root{
-    position: relative;
     display: flex;
     flex-direction: column;
-    height: 100vh;
 }
 
 .navbar{
@@ -24,7 +26,7 @@
 }
 
 .cart-container{
-    position: absolute;
+    position: fixed;
     bottom: 40px;
     right: 40px;
     background-color: #FAB315;
@@ -56,6 +58,37 @@
 
 .container{
     display: flex;
-    height: 100%;
-    background-color: rgb(231, 226, 218);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.shop-items-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-container{
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid rgb(114, 114, 114);
+}
+
+.card-img{
+    height: 250px;
+    width: auto;
+}
+
+.card-container:hover{
+    border: 2px solid rgb(114, 114, 114);
+}
+
+@media only screen and (max-width: 768px){
+    .cart-container{
+        bottom: 20px;
+        right: 20px;
+        padding: 15px;
+    }
 }

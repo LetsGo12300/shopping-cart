@@ -9,12 +9,13 @@ import "./styles/style.css";
 
 const RouteSwitch = () => {
     const [cartItems, setCartItems] = useState(0);
+    
     return (
         <BrowserRouter>
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />}></Route>
-                <Route path="shop" element={<Shop setCartItems={setCartItems}/>}></Route>
+                <Route path="shop" element={<Shop cartItems={cartItems} setCartItems={setCartItems}/>}></Route>
                 <Route path="cart" element={<Cart />}></Route>
             </Routes>
             <StickyCart cartItems={cartItems}/>
