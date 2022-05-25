@@ -1,5 +1,6 @@
 import CheckoutItem from './CheckoutItem';
 import React from 'react';
+import Total from './Total';
 
 const Cart = (props) => {
     const { items, setItems, cartItems, setCartItems } = props;
@@ -13,6 +14,7 @@ const Cart = (props) => {
                 return <CheckoutItem key={item.id} currentItem={item} items={items} setItems={setItems} cartItems={cartItems} setCartItems={setCartItems}/>
             })}
           </div>
+          { checkoutItems.length > 0 && <Total items={items}/> }
       </div>
     );
   };
