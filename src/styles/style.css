@@ -130,6 +130,8 @@ html, body, #root{
     margin: 10px;
     padding: 20px;
     border: 1px solid rgb(114, 114, 114);
+    width: 350px;
+    height: 350px;
 }
 
 .card-container-1:hover{
@@ -158,8 +160,9 @@ html, body, #root{
 
 .card-container-2{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 450px 300px;
     gap: 15px;
+    padding: 20px;
 }
 
 .right-card-container-2{
@@ -174,6 +177,8 @@ html, body, #root{
 }
 
 .item-title{
+    display: flex;
+    max-width: 500px;
     font-size: 2.5em;
     font-weight: bold;
 }
@@ -232,7 +237,7 @@ input[type=number]{
     font-size: 1em;
     margin-top: 25px;
     padding: 5px;
-    width: 70%;
+    width: 80%;
     height: 40px;
     background-color: #FAB315;
     border: none;
@@ -253,17 +258,56 @@ input[type=number]{
 /* CheckoutItem.js */
 
 .checkout-item{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border: 2px solid black;
-    margin: 5px;
-    padding: 10px;
+    display: grid;
+    grid-template-columns: 150px 350px 1fr 100px 50px;
+    place-items: center;
+    gap: 20px;
+    border: 1px solid rgb(114, 114, 114);
+    margin: 8px;
+    padding: 5px 30px;
 }
 
 .card-checkout{
     height: 150px;
     width: auto;
+}
+
+.checkout-name{
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.checkout-price, .checkout-price-total{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.checkout-price{
+    margin-top: 5px;
+    color: red;
+}
+
+.checkout-price-total{
+    font-size: 1.2em;
+}
+
+.delete-btn{
+    text-align: center;
+    font-size: 1.5em;
+    border: none;
+    width: 40px;
+    color: rgb(107, 107, 107);
+    border-radius: 10px;
+}
+
+.delete-btn:hover{
+    color: rgb(196, 179, 179);
+}
+
+.delete-btn:active{
+    background-color: #d7dbe4;
+    color: rgb(107, 107, 107);
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -286,6 +330,20 @@ input[type=number] {
     color:rgb(114, 114, 114);
 }
 
+/* Total.js */
+
+.cart-total{
+    margin-top: 20px;
+    padding: 30px;
+    text-align: right;
+}
+
+.checkout-total{
+    display: inline;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
 @media only screen and (max-width: 768px){
     .cart-container{
         bottom: 20px;
@@ -305,13 +363,19 @@ input[type=number] {
         margin-bottom: 5px;
     }
 
+    .card-container-1{
+        width: 300px;
+        height: 300px;
+    }
+
     .card-container-2{
         display: flex;
         flex-direction: column;
     }
 
-    .card-img-2{
+    .card-img, .card-img-2{
         height: 250px;
+        width: auto;
     }
 
     .item-title{
@@ -325,5 +389,25 @@ input[type=number] {
     .add-to-cart-btn{
         margin-top: 15px;
         width: 100%;
+    }
+
+    .checkout-item{
+        grid-template-columns: 100px 100px 1fr 100px 50px;
+        gap: 10px;
+        margin: 4px;
+        padding: 5px 15px;
+    }
+
+    .card-checkout{
+        height: 100px;
+        width: auto;
+    }
+
+    .modify-btns{
+        gap: 0px;
+    }
+
+    .container{
+        overflow: auto;
     }
 }

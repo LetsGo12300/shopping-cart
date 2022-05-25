@@ -64,10 +64,8 @@ const CheckoutItem = (props) => {
                 className="card-checkout"
             />
             <div>
-                {currentItem.name}
-            </div>
-            <div>
-                ${currentItem.price}
+                <div className="checkout-name">{currentItem.name}</div>
+                <div className="checkout-price">${currentItem.price} / item</div>
             </div>
             <div className="modify-btns">
                 <button onClick={subtractItem} className="modify-btn decrement">-</button>
@@ -84,10 +82,10 @@ const CheckoutItem = (props) => {
                 </div>
                 <button onClick={addItem} className="modify-btn increment">+</button>
             </div>
-            <div>
+            <div className="checkout-price-total">
                 ${(currentItem.price*currentItem.quantity).toFixed(2)}
             </div>
-            <button onClick={deleteItem} className="modify-btn">x</button>
+            <button onClick={deleteItem} className="delete-btn">x</button>
         </div>
     );
   };

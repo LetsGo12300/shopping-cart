@@ -12,10 +12,10 @@ const Total = (props) => {
 
       setTotal(getTotal().toFixed(2));
     }, [items]);
-    
+
     return (
         <div className="cart-total">
-            Total: <b>${total}</b>
+            Total: <div className="checkout-total">${total}</div>
         </div>
     );
 };

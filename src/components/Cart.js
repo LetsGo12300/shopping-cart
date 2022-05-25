@@ -13,9 +13,10 @@ const Cart = (props) => {
             {checkoutItems.map(item => {
                 return <CheckoutItem key={item.id} currentItem={item} items={items} setItems={setItems} cartItems={cartItems} setCartItems={setCartItems}/>
             })}
+            { checkoutItems.length > 0 && <Total items={items}/> }
           </div>
           { checkoutItems.length === 0 && <div className="empty-cart">Your cart is empty</div>}
-          { checkoutItems.length > 0 && <Total items={items}/> }
+          
       </div>
     );
   };
