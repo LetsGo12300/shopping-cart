@@ -13,9 +13,14 @@ const Total = (props) => {
       setTotal(getTotal().toFixed(2));
     }, [items]);
 
+    const showAlert = () => {
+        window.alert('Successfully checked out!');
+    };
+
     return (
         <div className="cart-total">
             Total: <div className="checkout-total">${total}</div>
+            <button onClick={showAlert} className="checkout-btn">CHECK OUT</button>
         </div>
     );
 };

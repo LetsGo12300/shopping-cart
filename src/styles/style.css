@@ -333,15 +333,33 @@ input[type=number] {
 /* Total.js */
 
 .cart-total{
+    display: flex;
+    align-items: center;
+    justify-content: end;
     margin-top: 20px;
-    padding: 30px;
-    text-align: right;
+    padding-right: 20px;
 }
 
 .checkout-total{
     display: inline;
     font-size: 1.25em;
     font-weight: bold;
+    margin-left: 10px;
+}
+
+.checkout-btn{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #facc15;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    margin-left: 15px;
+}
+
+.checkout-btn:hover{
+    background-color: #fde047;
 }
 
 @media only screen and (max-width: 768px){
