@@ -43,35 +43,37 @@ const ShopItem = (props) => {
     };
     
     return (
-        <div className="container">
-            <div className="card-container">
+        <div className="shop-item-container">
+            <div className="item-container">
                 <Image
-                  webp={item.source}
-                  alt={item.name}
-                  className="card-img"
+                    webp={item.source}
+                    alt={item.name}
+                    className="card-img"
                 />
-                <h4>{item.name}</h4>
-                <div>${item.price}</div>
-                <div className="shop-btns">
-                    <div className="modify-btns">
-                        <button onClick={subtractCount} className="modify-btn decrement">-</button>
-                        <div>
-                            <input
-                                onChange={handleInputChange}
-                                className="input-item"
-                                type="number"
-                                name="items"
-                                value={buyCount}
-                                required
-                            />
+                <div>
+                    <h4>{item.name}</h4>
+                    <div>${item.price}</div>
+                    <div className="shop-btns">
+                        <div className="modify-btns">
+                            <button onClick={subtractCount} className="modify-btn decrement">-</button>
+                            <div>
+                                <input
+                                    onChange={handleInputChange}
+                                    className="input-item"
+                                    type="number"
+                                    name="items"
+                                    value={buyCount}
+                                    required
+                                />
+                            </div>
+                            <button onClick={addCount} className="modify-btn increment">+</button>
                         </div>
-                        <button onClick={addCount} className="modify-btn increment">+</button>
-                    </div>
-                    <div>
-                        <button onClick={addToCart} className="add-to-cart-btn">Add to Cart</button>
+                        <div>
+                            <button onClick={addToCart} className="add-to-cart-btn">Add to Cart</button>
+                        </div>
                     </div>
                 </div>
-              </div>
+        </div>
         </div>
     );
 };

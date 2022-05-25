@@ -15,6 +15,17 @@ html, body, #root{
     flex-direction: column;
 }
 
+.title{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.abril{
+    font-family: 'Abril Fatface', cursive;
+}
+
+/* Navbar.js */
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -24,6 +35,60 @@ html, body, #root{
     background-color: black;
     color: #FAB315;
 }
+
+.links{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.link{
+    color: inherit;
+    text-decoration: inherit;
+    font-size: 1.2em;
+}
+
+/* Home.js */
+
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.section-1{
+    display: flex;
+    background-color: #E5E7EB;
+    color: #1F2937;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    padding: 50px;
+    margin: 0px 200px;
+}
+
+.home-title{
+    font-size: 3.5em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.shop-btn{
+    font-size: 1em;
+    margin-top: 20px;
+    padding: 5px 25px;
+    background-color: #1F2937;
+    color: #E5E7EB;
+    border: none;
+}
+
+.shop-btn:hover{
+    background-color: #7b808a;
+}
+
+/* StickyCart.js */
 
 .cart-container{
     position: fixed;
@@ -44,17 +109,7 @@ html, body, #root{
     color: #ca8a04;
 }
 
-.links{
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-}
-
-.link{
-    color: inherit;
-    text-decoration: inherit;
-    font-size: 1.2em;
-}
+/* Shop.js */
 
 .container{
     display: flex;
@@ -63,11 +118,6 @@ html, body, #root{
     justify-content: center;
     padding: 30px;
     height: max-content;
-}
-
-.title{
-    font-size: 2.5em;
-    margin-bottom: 20px;
 }
 
 .shop-items-container{
@@ -82,19 +132,21 @@ html, body, #root{
     border: 1px solid rgb(114, 114, 114);
 }
 
+.card-container:hover{
+    border: 2px solid rgb(114, 114, 114);
+}
+
 .card-img{
     height: 300px;
     width: auto;
-}
-
-.card-container:hover{
-    border: 2px solid rgb(114, 114, 114);
 }
 
 .shop-item-link{
     text-decoration: none;
     color: inherit;
 }
+
+/* ShopItem.js */
 
 .modify-btns{
     display: flex;
@@ -130,6 +182,8 @@ html, body, #root{
     width: 40px;
 }
 
+/* CheckoutItem.js */
+
 .checkout-item{
     display: flex;
     align-items: center;
@@ -147,14 +201,16 @@ html, body, #root{
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
+
+/* Cart.js */
 
 .empty-cart{
     margin: 20px;
@@ -162,56 +218,12 @@ input[type=number] {
     color:rgb(114, 114, 114);
 }
 
-.home{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-}
-
-.section-1{
-    display: flex;
-    background-color: #E5E7EB;
-    color: #1F2937;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
-    padding: 50px;
-    margin: 0px 200px;
-}
-
-.abril{
-    font-family: 'Abril Fatface', cursive;
-}
-
-.home-title{
-    font-size: 3.5em;
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
-
-.shop-btn{
-    font-size: 1em;
-    margin-top: 20px;
-    padding: 5px 25px;
-    background-color: #1F2937;
-    color: #E5E7EB;
-    border: none;
-}
-
-.shop-btn:hover{
-    background-color: #7b808a;
-}
-
-
 @media only screen and (max-width: 768px){
     .cart-container{
         bottom: 20px;
         right: 20px;
         padding: 15px;
     }
-
 
     .section-1{
         height: 300px;
