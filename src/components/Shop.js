@@ -7,7 +7,7 @@ const Shop = (props) => {
 
   return (
     <div className="container">
-      <h2>New Releases</h2>
+      <div className="abril title">NEW RELEASES</div>
       <div className="shop-items-container">
         {items.map(item => {
           return (
