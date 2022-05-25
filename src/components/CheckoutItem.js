@@ -1,14 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'react-image-webp';
 
 const CheckoutItem = (props) => {
     const { currentItem, items, setItems, cartItems, setCartItems } = props;
+    const [ itemQuantity, setItemQuantity ] = useState(currentItem.quantity);
 
     const handleInputChange = (e) => {
-        const value = parseInt(e.target.value);
-        const newItems = [...items];
-        newItems.find(item => item.id === currentItem.id).quantity = value;
-        setItems(newItems);
+        if (e.target.value){
+            const value = parseInt(e.target.value);
+            setItemQuantity(value);
+        }
+        else {
+            setItemQuantity('');
+        }
+    };
+
+    const handleInputBlur = (e) => {
+        if (e.target.value){
+            const value = parseInt(e.target.value);
+            const newItems = [...items];
+            newItems.find(item => item.id === currentItem.id).quantity = value;
+            setItems(newItems);
+            setCartItems(getCartItemsSum());
+        } else {
+            // set to same as before's value
+            setItemQuantity(currentItem.quantity);
+        }
+    };
+
+    const getCartItemsSum = () => {
+        return items.map(item => item.quantity)
+        .reduce((total, quantity) => total + quantity, 0);
     };
 
     const deleteItem = () => {
@@ -23,6 +45,7 @@ const CheckoutItem = (props) => {
         newItems.find(item => item.id === currentItem.id).quantity += 1;
         setItems(newItems);
         setCartItems(cartItems+1);
+        setItemQuantity(itemQuantity+1);
     }
 
     const subtractItem = () => {
@@ -30,6 +53,7 @@ const CheckoutItem = (props) => {
         newItems.find(item => item.id === currentItem.id).quantity -= 1;
         setItems(newItems);
         setCartItems(cartItems-1);
+        setItemQuantity(itemQuantity-1);
     }
 
     return (
@@ -49,11 +73,12 @@ const CheckoutItem = (props) => {
                 <button onClick={subtractItem} className="modify-btn decrement">-</button>
                 <div>
                     <input
+                        onBlur={handleInputBlur}
                         onChange={handleInputChange}
                         className="input-item"
                         type="number"
                         name="items"
-                        value={currentItem.quantity}
+                        value={itemQuantity}
                         required
                     />
                 </div>

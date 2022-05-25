@@ -11,8 +11,12 @@ const ShopItem = (props) => {
     const item = items.find(item => item.id === parseInt(itemId));
 
     const handleInputChange = (e) => {
-        const value = parseInt(e.target.value);
-        setBuyCount(value);
+        if (e.target.value){
+            const value = parseInt(e.target.value);
+            setBuyCount(value);
+        } else {
+            setBuyCount('');
+        }
     };  
 
     const addCount = () => {
@@ -25,10 +29,12 @@ const ShopItem = (props) => {
     }; 
 
     const addToCart = () => {
-        const newItems = [...items];
-        newItems.find(item => item.id === parseInt(itemId)).quantity += buyCount;
-        setItems(newItems);
-        setCartItems(getCartItemsSum());
+        if (buyCount) {
+            const newItems = [...items];
+            newItems.find(item => item.id === parseInt(itemId)).quantity += buyCount;
+            setItems(newItems);
+            setCartItems(getCartItemsSum());
+        }
     };
 
     const getCartItemsSum = () => {
