@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&family=Roboto&display=swap');
 
 *{
     font-family: 'Roboto', sans-serif;
@@ -126,13 +126,13 @@ html, body, #root{
     flex-wrap: wrap;
 }
 
-.card-container{
+.card-container-1{
     margin: 10px;
     padding: 20px;
     border: 1px solid rgb(114, 114, 114);
 }
 
-.card-container:hover{
+.card-container-1:hover{
     border: 2px solid rgb(114, 114, 114);
 }
 
@@ -148,17 +148,67 @@ html, body, #root{
 
 /* ShopItem.js */
 
+.shop-item-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card-container-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.right-card-container-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-img-2{
+    height: 450px;
+    width: auto;
+}
+
+.item-title{
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.item-price{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    color: red;
+    text-align: left;
+    margin-top: 10px;
+}
+
+input[type=number]{
+    text-align: center;
+}
+
+.shop-btns{
+    margin-top: 40px;
+}
+
 .modify-btns{
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 5px;
     width: fit-content;
     background-color: #d3d3d3;
 }
 
 .modify-btn{
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+    border: none;
     width: 30px;
-    height: 30px;
+    height: 40px;
     padding: 5px;
 }
 
@@ -166,20 +216,38 @@ html, body, #root{
     background-color: #84cc16;
 }
 
+.increment:active{
+    background-color: #7ea544;
+}
+
 .decrement{
     background-color: #ef4444;
 }
 
+.decrement:active{
+    background-color: #8f3737;
+}
+
 .add-to-cart-btn{
-    margin-top: 15px;
+    font-size: 1em;
+    margin-top: 25px;
     padding: 5px;
-    width: 100%;
+    width: 70%;
+    height: 40px;
     background-color: #FAB315;
+    border: none;
+    border-radius: 20px;
+}
+
+.add-to-cart-btn:active{
+    background-color: #fcd34d;
 }
 
 .input-item{
     font-size: 1em;
     width: 40px;
+    border: none;
+    background-color: inherit;
 }
 
 /* CheckoutItem.js */
@@ -235,5 +303,27 @@ input[type=number] {
         font-size: 2em;
         margin-top: 10px;
         margin-bottom: 5px;
+    }
+
+    .card-container-2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-img-2{
+        height: 250px;
+    }
+
+    .item-title{
+        font-size: 1.8em;
+    }
+
+    .shop-btns{
+        margin-top: 15px;
+    }
+
+    .add-to-cart-btn{
+        margin-top: 15px;
+        width: 100%;
     }
 }

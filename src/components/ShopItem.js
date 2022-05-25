@@ -44,15 +44,17 @@ const ShopItem = (props) => {
     
     return (
         <div className="shop-item-container">
-            <div className="item-container">
+            <div className="card-container-2">
                 <Image
                     webp={item.source}
                     alt={item.name}
-                    className="card-img"
+                    className="card-img-2"
                 />
-                <div>
-                    <h4>{item.name}</h4>
-                    <div>${item.price}</div>
+                <div className="right-card-container-2">
+                    <div>
+                        <div className="item-title abril">{item.name}</div>
+                        <div className="item-price">${item.price} / item</div>
+                    </div>
                     <div className="shop-btns">
                         <div className="modify-btns">
                             <button onClick={subtractCount} className="modify-btn decrement">-</button>

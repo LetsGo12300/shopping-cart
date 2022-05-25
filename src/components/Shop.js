@@ -12,7 +12,7 @@ const Shop = (props) => {
         {items.map(item => {
           return (
             <Link to={`/shop/${item.id}`} key={item.id} className="shop-item-link">
-              <div className="card-container">
+              <div className="card-container-1">
                 <Image
                   webp={item.source}
                   alt={item.name}
