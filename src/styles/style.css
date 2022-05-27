@@ -31,6 +31,7 @@ html, body, #root{
     justify-content: space-between;
     align-items: center;
     height: 40px;
+    position: relative;
     padding: 20px 25px;
     background-color: black;
     color: #FAB315;
@@ -335,7 +336,7 @@ input[type=number] {
 .cart-total{
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     margin-top: 20px;
     padding-right: 20px;
 }
@@ -351,7 +352,7 @@ input[type=number] {
     font-size: 1em;
     font-weight: bold;
     padding: 10px 20px;
-    background-color: #facc15;
+    background-color: #ffcc00;
     color: white;
     border: none;
     border-radius: 15px;
@@ -360,6 +361,12 @@ input[type=number] {
 
 .checkout-btn:hover{
     background-color: #fde047;
+}
+
+.checkout-table{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 @media only screen and (max-width: 768px){
@@ -410,22 +417,17 @@ input[type=number] {
     }
 
     .checkout-item{
-        grid-template-columns: 100px 100px 1fr 100px 50px;
-        gap: 10px;
+        grid-template-columns: 1fr 1fr 60px 50px;
+        gap: 15px;
         margin: 4px;
-        padding: 5px 15px;
+        padding: 15px 10px;
     }
 
     .card-checkout{
-        height: 100px;
-        width: auto;
+        display: none;
     }
 
     .modify-btns{
         gap: 0px;
-    }
-
-    .container{
-        overflow: auto;
     }
 }
