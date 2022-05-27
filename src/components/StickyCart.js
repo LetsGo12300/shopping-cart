@@ -9,7 +9,7 @@ const StickyCart = () => {
     return (
         <div className="cart-container">
             <div>{cartItems} items in your cart</div>
-            <Link to="cart">
+            <Link to="/cart">
                 <Icon 
                     className="shopping-cart" 
                     path={mdiCart} 

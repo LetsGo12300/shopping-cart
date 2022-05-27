@@ -16,13 +16,13 @@ const RouteSwitch = () => {
 
     return (
         <ShopContext.Provider value={{cartItems, setCartItems, items, setItems}}>
-            <BrowserRouter>
+            <BrowserRouter basename='/shopping-cart'>
                 <Navbar />
                 <Routes>
                     <Route path="/" element={<Home />}></Route>
-                    <Route path="shop" element={<Shop/>}></Route>
+                    <Route path="/shop" element={<Shop/>}></Route>
                     <Route path="/shop/:itemId" element={<ShopItem/>}></Route>
-                    <Route path="cart" element={<Cart/>}></Route>
+                    <Route path="/cart" element={<Cart/>}></Route>
                 </Routes>
                 <StickyCart/>
             </BrowserRouter>

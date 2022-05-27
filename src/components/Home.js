@@ -12,7 +12,7 @@ const Home = () => {
         <p>
           Don't miss out on this season's must have products. Featuring Funko POP! from Marvel Studios' Spider-man No Way Home.
         </p>
-        <Link to="shop"><button className="shop-btn">SHOP NOW</button></Link>
+        <Link to="/shop"><button className="shop-btn">SHOP NOW</button></Link>
       </div>
     </div>
   );

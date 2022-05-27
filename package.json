@@ -2,7 +2,7 @@
   "name": "shopping-cart",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://letsgo12300.github.io/shopping-cart/",
+  "homepage": "https://letsgo12300.github.io/shopping-cart",
   "dependencies": {
     "@mdi/js": "^6.7.96",
     "@mdi/react": "^1.6.0",
