@@ -11,5 +11,8 @@ A basic shopping cart app built in React's `react-router-dom` to display multipl
 
 # Built with
 * [React](https://reactjs.org/docs/getting-started.html)
-* [React-Router](https://reactrouter.com/docs/en/v6/getting-started/overview)
+* [React Router](https://reactrouter.com/docs/en/v6/getting-started/overview)
 * [Context](https://reactjs.org/docs/context.html)
+
+# Credits
+- [Funko Pop images](https://funko.fandom.com/wiki/Pop!_Marvel)
