@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Image from 'react-image-webp';
 import { useParams } from 'react-router-dom';
+import { ShopContext } from '../contexts/ShopContext';
 
-const ShopItem = (props) => {
-    const { items, setItems, setCartItems} = props;
+const ShopItem = () => {
+    const { items, setItems, setCartItems} = useContext(ShopContext);
     const { itemId } = useParams();
     const [buyCount, setBuyCount] = useState(0);
 

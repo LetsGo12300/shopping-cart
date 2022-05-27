@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext} from "react";
 import Image from 'react-image-webp';
 import { Link } from "react-router-dom";
+import { ShopContext } from "../contexts/ShopContext";
 
-const Shop = (props) => {
-  const { items } = props;
+const Shop = () => {
+  const { items } = useContext(ShopContext);
 
   return (
     <div className="container">
