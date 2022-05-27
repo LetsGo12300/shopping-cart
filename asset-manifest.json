@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.7267ed59.css",
-    "main.js": "/shopping-cart/static/js/main.6cc55636.js",
+    "main.css": "/shopping-cart/static/css/main.2d540d0c.css",
+    "main.js": "/shopping-cart/static/js/main.95314843.js",
     "static/media/911_-_Spider-Man.webp": "/shopping-cart/static/media/911_-_Spider-Man.a26d68f0ee0cb9b3a5fa.webp",
     "static/media/912_-_Doctor_Strange.webp": "/shopping-cart/static/media/912_-_Doctor_Strange.4d957d8714ba7d9fdea2.webp",
     "static/media/925_-_Ned.webp": "/shopping-cart/static/media/925_-_Ned.9a434e16283ac94c9e52.webp",
     "static/media/924_-_MJ.webp": "/shopping-cart/static/media/924_-_MJ.89246a1a72291d823f32.webp",
     "index.html": "/shopping-cart/index.html",
-    "main.7267ed59.css.map": "/shopping-cart/static/css/main.7267ed59.css.map",
-    "main.6cc55636.js.map": "/shopping-cart/static/js/main.6cc55636.js.map"
+    "main.2d540d0c.css.map": "/shopping-cart/static/css/main.2d540d0c.css.map",
+    "main.95314843.js.map": "/shopping-cart/static/js/main.95314843.js.map"
   },
   "entrypoints": [
-    "static/css/main.7267ed59.css",
-    "static/js/main.6cc55636.js"
+    "static/css/main.2d540d0c.css",
+    "static/js/main.95314843.js"
   ]
 }
