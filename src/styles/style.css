@@ -49,6 +49,10 @@ html, body, #root{
     font-size: 1.2em;
 }
 
+.link:hover{
+    font-weight: bold;
+}
+
 /* Home.js */
 
 .home{
@@ -83,10 +87,12 @@ html, body, #root{
     background-color: #1F2937;
     color: #E5E7EB;
     border: none;
+    transition: transform 0.2s ease-in-out;
 }
 
 .shop-btn:hover{
     background-color: #7b808a;
+    transform: scale(1.1);
 }
 
 /* StickyCart.js */
@@ -100,6 +106,12 @@ html, body, #root{
     align-items: center;
     gap: 10px;
     padding: 20px;
+    box-shadow: 4px 5px #888888;
+    transition: transform 0.1s ease-in-out;
+}
+
+.cart-container:hover{
+    transform: scale(1.05);
 }
 
 .shopping-cart{
@@ -216,6 +228,11 @@ input[type=number]{
     width: 30px;
     height: 40px;
     padding: 5px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.modify-btn:hover{
+    transform: scale(1.05);
 }
 
 .increment{
@@ -243,6 +260,12 @@ input[type=number]{
     background-color: #FAB315;
     border: none;
     border-radius: 20px;
+    transition: transform 0.1s ease-in-out;
+    box-shadow: 2px 3px #888888;
+}
+
+.add-to-cart-btn:hover{
+    transform: scale(1.05);
 }
 
 .add-to-cart-btn:active{
@@ -300,10 +323,11 @@ input[type=number]{
     width: 40px;
     color: rgb(107, 107, 107);
     border-radius: 10px;
+    box-shadow: 2px 2px #888888;
 }
 
 .delete-btn:hover{
-    color: rgb(196, 179, 179);
+    color: red;
 }
 
 .delete-btn:active{
@@ -353,10 +377,11 @@ input[type=number] {
     font-weight: bold;
     padding: 10px 20px;
     background-color: #ffcc00;
-    color: white;
+    color: #166534;
     border: none;
     border-radius: 15px;
     margin-left: 15px;
+    box-shadow: 2px 2px #888888;
 }
 
 .checkout-btn:hover{
