@@ -24,6 +24,12 @@ const ShopItem = () => {
         }
     };  
 
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter'){
+            addToCart();
+        }
+    };
+
     const addCount = () => {
         setBuyCount(buyCount+1);
     }; 
@@ -66,6 +72,7 @@ const ShopItem = () => {
                             <div>
                                 <input
                                     onChange={handleInputChange}
+                                    onKeyDown={handleKeyDown}
                                     className="input-item"
                                     type="number"
                                     name="items"

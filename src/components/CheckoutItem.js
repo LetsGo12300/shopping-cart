@@ -15,7 +15,7 @@ const CheckoutItem = (props) => {
         }
     };
 
-    const handleInputBlur = (e) => {
+    const computeTotal = (e) => {
         if (e.target.value){
             const value = parseInt(e.target.value);
             const newItems = [...items];
@@ -25,6 +25,12 @@ const CheckoutItem = (props) => {
         } else {
             // set to same as before's value
             setItemQuantity(currentItem.quantity);
+        }
+    };
+
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter'){
+            computeTotal(e);
         }
     };
 
@@ -71,7 +77,8 @@ const CheckoutItem = (props) => {
                 <button onClick={subtractItem} className="modify-btn decrement">-</button>
                 <div>
                     <input
-                        onBlur={handleInputBlur}
+                        onBlur={computeTotal}
+                        onKeyDown={handleKeyDown}
                         onChange={handleInputChange}
                         className="input-item"
                         type="number"
