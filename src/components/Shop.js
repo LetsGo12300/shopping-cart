@@ -1,10 +1,14 @@
-import React, { useContext} from "react";
+import React, { useContext, useEffect } from "react";
 import Image from 'react-image-webp';
 import { Link } from "react-router-dom";
 import { ShopContext } from "../contexts/ShopContext";
 
 const Shop = () => {
   const { items } = useContext(ShopContext);
+
+  useEffect(() => {
+    document.title = "Best Buys - Browse Shop";
+  });
 
   return (
     <div className="container">

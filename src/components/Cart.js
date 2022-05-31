@@ -1,11 +1,15 @@
 import CheckoutItem from './CheckoutItem';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Total from './Total';
 import { ShopContext } from '../contexts/ShopContext';
 
 const Cart = () => {
     const { items, setItems, cartItems, setCartItems } = useContext(ShopContext) ;
     const checkoutItems = items.filter(item => item.quantity > 0);
+
+    useEffect(() => {
+      document.title = "Best Buys - Checkout";
+    });
 
     return (
       <div className="container">

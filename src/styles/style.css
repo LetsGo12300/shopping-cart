@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fredoka+One&family=Montserrat&family=Roboto&display=swap');
 
 *{
     font-family: 'Roboto', sans-serif;
@@ -35,6 +35,11 @@ html, body, #root{
     padding: 20px 25px;
     background-color: black;
     color: #FAB315;
+}
+
+h2.navbar-title{
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 1px;
 }
 
 .links{

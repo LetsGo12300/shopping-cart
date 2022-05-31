@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Image from 'react-image-webp';
 import { useParams } from 'react-router-dom';
 import { ShopContext } from '../contexts/ShopContext';
@@ -10,6 +10,10 @@ const ShopItem = () => {
 
     // find item
     const item = items.find(item => item.id === parseInt(itemId));
+
+    useEffect(() => {
+        document.title = "Best Buys - Browse Item";
+    });
 
     const handleInputChange = (e) => {
         if (e.target.value){
